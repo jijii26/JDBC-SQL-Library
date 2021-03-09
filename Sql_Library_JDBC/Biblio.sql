@@ -36,10 +36,10 @@ create table livre
 
 insert into livre values
 (1234567891,1,'un Livre',35,1,1),
-(1234567892,2,'Les indÈsirables',30,2,1),
-(1234567893,3,'AurienthÈ Obget',45,3,2),
+(1234567892,2,'Les ind√©sirables',30,2,1),
+(1234567893,3,'Aurienth√© Obget',45,3,2),
 (1234567894,1,'Gean-Chochua halal',35,4,2),
-(1234567895,3,'IllÈtrÈ',35,5,1)
+(1234567895,3,'Ill√©tr√©',35,5,1)
 go
 
 
@@ -77,31 +77,31 @@ adresse varchar(50))
 go
 
 insert into librairie values
-(1, 'Librairie vraiment Cher', '9595 TrËLoin'),
+(1, 'Librairie vraiment Cher', '9595 Tr√®Loin'),
 (2, 'SansNom', '1010 UnChemin')
 go
 
- -----------fonctionalitÈs---------------------
+ -----------fonctionalit√©s---------------------
 
-  --fonctionalitÈ 1 
- select l.titre, e.exemplaire 
-						from livre l inner join edition e on l.no_edition = e.no_edition 
-							where e.no_edition = 2
+  --fonctionalit√© 1 
+select l.titre, e.exemplaire 
+from livre l inner join edition e on l.no_edition = e.no_edition 
+where e.no_edition = 2
 
- --fonctionalitÈ 2
+ --fonctionalit√© 2
 select e.no_edition as 'numero edition',e.exemplaire as 'nombre d''exemplaire',e.ordre as 'l''ordre'
 from Edition e inner join livre l on l.no_edition = e.no_edition
 where l.id_livre = 2
 go
 
---fonctionnalitÈ 3 
+--fonctionnalit√© 3 
 select l.titre,e.exemplaire
 from Edition e inner join livre l on e.no_edition=l.no_edition
 where e.no_edition = 1
 go
 
 
---fonctionalitÈ 4
+--fonctionalit√© 4
 select l.no_isbn, l.no_edition, l.titre, l.prix,l.no_livre  
 from livre l inner join librairie li on li.no_librairie = l.no_librairie 
 where li.no_librairie = 1
