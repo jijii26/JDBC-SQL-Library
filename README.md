@@ -1,4 +1,4 @@
-# JDBC-SQL-Library
+# JDBC-SQL-Librairy
 
 ## You need to install your own JDBC drivers for the database 
 
